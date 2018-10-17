@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>Projeto</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/style.css">
+
+    <script src="../../assets/library/jquery.min.js"></script>
+    <script src="../../assets/semantic/components/visibility.js"></script>
+    <script src="../../assets/semantic/components/sidebar.js"></script>
+    <script src="../../assets/semantic/components/transition.js"></script>
+    <script>
+        $(document)
+            .ready(function() {
+
+                // fix menu when passed
+                $('.masthead')
+                    .visibility({
+                        once: false,
+                        onBottomPassed: function() {
+                            $('.fixed.menu').transition('fade in');
+                        },
+                        onBottomPassedReverse: function() {
+                            $('.fixed.menu').transition('fade out');
+                        }
+                    })
+                ;
+
+                // create sidebar and attach to menu open
+                $('.ui.sidebar')
+                    .sidebar('attach events', '.toc.item')
+                ;
+
+            })
+        ;
+    </script>
+</head>
+<body>
+
+
+
+<!-- Sidebar Menu -->
+<div class="ui vertical inverted sidebar menu">
+    <a class="active item">Início</a>
+    <a class="item">Ajuda</a>
+    <a class="item">Sobre</a>
+    <a class="item">Login</a>
+</div>
+
+<!-- Page Contents -->
+<div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment tela-ajuda" >
+
+        <div class="ui container">
+            <div class="ui large secondary inverted pointing menu">
+                <a class="toc item">
+                    <i class="sidebar icon"></i>
+                </a>
+                <img src="">
+                <a href="tela_inicio.php" class="active item">Início</a>
+                <a class="item">Ajuda</a>
+                <a href="tela_sobre.php" class="item">Sobre</a>
+                <div class="right item">
+                    <a href="tela_inicio.php" class="ui inverted button">Cadastrar</a>
+                    <a href="login.php" class="ui inverted button">Entrar</a>
+                </div>
+            </div>
+        </div><br><br>
+
+        <div class="ui text container" style = "text-align : left;">
+
+            <h1 class="ui  left floated texto-maior">
+                Saiba como utilizar nosso site!
+            </h1>
+            <h2 class="ui left floated segundo-texto">
+                Como se cadastrar:
+            </h2>
+            <div align="left">
+                <h3 class="ui left floated terceiro-texto">
+                    1º Ao entrar em nossa plataforma, a primeira coisa a se fazer é escolher
+                    o seu tipo de cadastro.<br>
+                    2º Como saber qual é meu tipo de cadastro? É simples! Se você possui uma
+                    uma micro ou pequena empresa você é do usuário tipo administrador. Se
+                    apenas vende para uma determinada empresa cadastrada você é do tipo vendedor!<br>
+                    3º Após identificar seu tipo de cadastro, selecione o campo adequado abaixo do
+                    botão "cadastre-se" e clique no botão "cadastre-se". Este botão ira redirecioná-lo
+                    para sua tela de cadastro, preencha todas as informações e clique no botão "cadastrar".<br>
+                    4º Parabéns! Agora você faz parte de nosso sistema! <br><br>
+
+                </h3>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- RODAPE-->
+    <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable inverted divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui inverted header">Sobre Nós</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Onde estamos</a>
+                        <a href="#" class="item">Clientes</a>
+                        <a href="#" class="item">Relatos</a>
+                        <a href="#" class="item">Contato</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui inverted header">O que fazemos</h4>
+                    <div class="ui inverted link list">
+                        <a href="#" class="item">Controle de estoque</a>
+                        <a href="#" class="item">Vitrine Virtual</a>
+                        <a href="#" class="item">Relatórios</a>
+                    </div>
+
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui inverted header">Siga-nos!</h4>
+                    <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=450&layout=standard&data-colorscheme=dark&action=like&size=small&show_faces=false&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+</body>
+
+</html>
